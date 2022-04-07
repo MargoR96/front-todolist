@@ -1,0 +1,148 @@
+@import 'normalize.css';
+
+:root {
+  --blue:#34ebb4;
+  --white:#e1edea;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.site-wrapper {
+  padding-left: 20px;
+  padding-right: auto;
+  padding-top:20px;
+}
+
+.new__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+}
+
+.caption {
+  margin:0;
+}
+
+.field__group {
+  display: flex;
+  height: 60px;
+  border: 1px solid black;
+  padding: 0 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.field__input {
+  flex: auto;
+  padding: 10px 0;
+  border: 0;
+  background-color: var(--white);
+}
+ 
+.button {
+  cursor: pointer;
+}
+
+.search__button {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  align-self: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px auto;
+  background-image: url(../img/icons/search.svg);
+  background-color: var(--blue);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.new__group {
+  padding-bottom: 10px;
+}
+
+.new__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  border-radius: 4px;
+  background-color: var(--blue);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.fields__group {
+  display: none;
+}
+
+.fields__group.is-active {
+  display: block;
+}
+
+.tasks__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.task__el {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 10px;
+}
+
+
+.task__caption {
+  cursor: pointer;
+}
+
+.important {
+  color: red;
+}
+
+.task__definition {
+  display: none;
+}
+
+.js-task-item {
+  display: none;
+}
+
+.js-definition-show {
+  display: block;
+}

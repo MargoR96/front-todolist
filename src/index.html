@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO List</title>
+  <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+  <main class="main">
+    <div class="site-wrapper">
+      <section class="new">
+        <div class="container new__container">
+          <h1 class="caption">TODO List</h1>
+          <h2 class="visually-hidden">Поиск</h2>
+          <form action="/" class="form search__form">
+              <legend class="form__legend visually-hidden">Поиск</legend>
+              <div class="field form__field">
+                <label for="search" class="label field__label visually-hidden"><span>Поиск</span></label>
+                <div class="field__group">
+                  <input type="search" id="search" class="field__input" placeholder="Название задачи" name="search">
+                  <button type="submit" class="button search__button"><span class="visually-hidden">Кнопка поиска</span></button>
+                </div>
+              </div>
+          </form>
+          <form action="/" class="form js-create-form">
+              <legend class="form__legend visually-hidden">Новая задача</legend>
+              <label for="newtask" class="label field__label"><span class="visually-hidden">Новая задача</span></label>
+              <button type="button" class="button new__button"><span>Создать новую задачу</span></button>
+              <div class="fields__group">
+                <div class="fields">
+                  <input type="text" id="newtask" class="fields__input" placeholder="Введите название задачи" name="task">
+                  <textarea name="task__definition" id="fields__definition" cols="30" rows="10" placeholder="Описание (необязательно)" class="fields__definition"></textarea>
+                </div>
+                <div class="new__group">
+                  <label for="task__check" class="label task__label visually-hidden">Отмечено</label>
+                  <input type="checkbox" id="task__check" name="task__check" class="task__check">
+                  <span class="task__caption">Важная задача</span>
+                </div>
+                <button type="submit" class="button check__button"><span>Применить</span></button>
+              </div>
+          </form>
+        </div>
+      </section>
+      <section class="tasks">
+        <div class="container">
+          <h2>Список задач</h2>
+          <ul class="tasks__list">
+            <li class="task">
+              <div class="task__el">
+                <div class="task__group">
+                  <label for="task__check" class="label task__label visually-hidden">Выполнено</label>
+                  <input type="checkbox" id="task__check" name="task__check">
+                  <span class="task__caption important">Чтение книги про собак</span>
+                </div>
+                <textarea name="" id="" cols="30" rows="10" class="task__definition">Чтение книги Ники и выделение основных мыслей</textarea>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div class="task__el js-task-item">
+    <div class="task__group">
+      <label for="task__check" class="label task__label visually-hidden">Выполнено</label>
+      <input type="checkbox" id="task__check" name="task__check">
+      <span class="task__caption"></span>
+    </div>
+    <textarea name="" id="" cols="30" rows="10" class="task__definition"></textarea>
+  </div>
+  <script src="assets/scripts/new.js"></script>
+  <script src="assets/scripts/search.js"></script>
+  <script src="assets/scripts/task.js"></script>
+</body>
+</html>
